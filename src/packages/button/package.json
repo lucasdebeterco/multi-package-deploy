@@ -1,0 +1,21 @@
+{
+    "name": "@lwrd-multi-package/button",
+    "private": false,
+    "version": "0.0.0",
+    "license": "MIT",
+    "source": "./dist/index.js",
+    "main": "./dist/index.js",
+    "scripts": {
+        "version:update": "npm version patch",
+        "build": "tsc"
+    },
+    "publishConfig": {
+        "access": "public",
+        "registry": "https://registry.npmjs.org"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/lucasdebeterco/multi-package-deploy.git"
+    },
+    "dependencies": {}
+}
