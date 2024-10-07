@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "jsx": "react-jsx",
+        "module": "ESNext",
+        "target": "ES6",
+        "removeComments": true,
+        "moduleResolution": "node",
+        "outDir": "dist",
+        "skipLibCheck": true,
+        "declaration": true
+    },
+    "include": ["src/*/"],
+}
