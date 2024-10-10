@@ -3,11 +3,24 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "workspaces": [
+    "src/packages/*"
+  ],
+//  "publishConfig": {
+//    "access": "public",
+//    "registry": "https://registry.npmjs.org"
+//  },
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint multi-package-deploy",
-    "preview": "vite preview"
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "release": "node ./scripts/release.js",
+    "version:all": "npm run --workspace src/packages version:update",
+    "publish:all": "npm publish --workspaces --if-present --access public",
+    "publish": "npm publish --access public"
   },
   "dependencies": {
     "react": "^18.3.1",
