@@ -25,11 +25,11 @@ try {
         const packagePath = join('src', 'packages', packageName)
         if (existsSync(packagePath)) {
             console.log(`Atualizando e publicando o pacote: ${packageName}`)
-            execSync(`npm run build --workspace ${packagePath}`, { stdio: 'inherit' })
-            execSync(`npm version patch --workspace ${packagePath}`, { stdio: 'inherit' })
-            execSync(`npm publish --workspace ${packagePath} --if-present --access public`, { stdio: 'inherit' })
+            execSync(npm run build --workspace ${packagePath}, { stdio: 'inherit' })
+            execSync(npm version patch --workspace ${packagePath}, { stdio: 'inherit' })
+            execSync(npm publish --workspace ${packagePath} --if-present --access public, { stdio: 'inherit' })
         } else {
-            console.log(`Pacote "${packageName}" não encontrado.`)
+            console.log(Pacote "${packageName}" não encontrado.)
         }
     }
 } catch (error) {
