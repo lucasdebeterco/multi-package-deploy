@@ -4,7 +4,7 @@ import { join } from 'path'
 
 const packageName = process.argv.find(arg => arg.startsWith('--package='))?.split('=')[1]
 //const npmToken = import.meta.env.VITE_NPM_TOKEN
-const npmToken = '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'
+const npmToken = ''
 
 // Cria um .npmrc temporário
 const npmrcPath = join(process.cwd(), '.npmrc')
@@ -18,18 +18,18 @@ if (npmToken) {
 try {
     if (!packageName) {
         console.log('Atualizando e publicando todos os pacotes...')
-        execSync(npm run build --workspaces, { stdio: 'inherit' })
+        execSync('npm run build --workspaces', { stdio: 'inherit' })
         execSync('npm version patch --workspaces', { stdio: 'inherit' })
         execSync('npm publish --workspaces --if-present --access public', { stdio: 'inherit' })
     } else {
         const packagePath = join('src', 'packages', packageName)
         if (existsSync(packagePath)) {
-            console.log(Atualizando e publicando o pacote: ${packageName})
-            execSync(npm run build --workspace ${packagePath}, { stdio: 'inherit' })
-            execSync(npm version patch --workspace ${packagePath}, { stdio: 'inherit' })
-            execSync(npm publish --workspace ${packagePath} --if-present --access public, { stdio: 'inherit' })
+            console.log(`Atualizando e publicando o pacote: ${packageName}`)
+            execSync(`npm run build --workspace ${packagePath}`, { stdio: 'inherit' })
+            execSync(`npm version patch --workspace ${packagePath}`, { stdio: 'inherit' })
+            execSync(`npm publish --workspace ${packagePath} --if-present --access public`, { stdio: 'inherit' })
         } else {
-            console.log(Pacote "${packageName}" não encontrado.)
+            console.log(`Pacote "${packageName}" não encontrado.`)
         }
     }
 } catch (error) {
