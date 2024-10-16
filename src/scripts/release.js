@@ -1,19 +1,21 @@
 import { execSync } from 'child_process'
-import { existsSync, unlinkSync,writeFileSync } from 'fs'
+import { existsSync, unlinkSync, writeFileSync } from 'fs'
 import { join } from 'path'
 
+// Lê o nome do pacote e o token
 const packageName = process.argv.find(arg => arg.startsWith('--package='))?.split('=')[1]
-//const npmToken = import.meta.env.VITE_NPM_TOKEN
 const npmToken = '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'
 
-// Cria um .npmrc temporário
+// Caminho do .npmrc
 const npmrcPath = join(process.cwd(), '.npmrc')
-if (npmToken) {
-    writeFileSync(npmrcPath, `//registry.npmjs.org/:_authToken=${npmToken}\n`)
-} else {
-    console.error('NPM_TOKEN não definido.')
+
+// Verifica se o token está configurado
+if (!npmToken) {
+    console.error('Erro: NPM_TOKEN não definido.')
     process.exit(1)
 }
+
+writeFileSync(npmrcPath, `//registry.npmjs.org/:_authToken=${npmToken}\n`)
 
 try {
     if (!packageName) {
@@ -22,21 +24,23 @@ try {
         execSync('npm version patch --workspaces', { stdio: 'inherit' })
         execSync('npm run publish:all', { stdio: 'inherit' })
     } else {
-        const packagePath = join('src', 'packages', packageName)
+        const packagePath = join(process.cwd(), 'src', 'packages', packageName)
+
         if (existsSync(packagePath)) {
             console.log(`Atualizando e publicando o pacote: ${packageName}`)
             execSync(`npm run build --workspace ${packagePath}`, { stdio: 'inherit' })
             execSync(`npm version patch --workspace ${packagePath}`, { stdio: 'inherit' })
             execSync(`npm publish --workspace ${packagePath} --if-present --access public`, { stdio: 'inherit' })
         } else {
-            console.log(`Pacote "${packageName}" não encontrado.`)
+            console.error(`Erro: Pacote "${packageName}" não encontrado.`)
         }
     }
 } catch (error) {
-    console.error('Erro ao executar o script:', error)
+    console.error('Erro ao executar o script:', error.message, error.stack)
 } finally {
     // Remove o .npmrc temporário
     if (existsSync(npmrcPath)) {
         unlinkSync(npmrcPath)
+        console.log('.npmrc temporário removido.')
     }
 }
