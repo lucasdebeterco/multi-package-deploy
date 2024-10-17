@@ -20,7 +20,7 @@ try {
         console.log('Atualizando e publicando todos os pacotes...')
         execSync('npm run build --workspaces', { stdio: 'inherit' })
         execSync('npm version patch --workspaces', { stdio: 'inherit' })
-        execSync('npm publish --workspaces --if-present --access public', { stdio: 'inherit' })
+        execSync('npm run publish:all', { stdio: 'inherit' })
     } else {
         const packagePath = join('src', 'packages', packageName)
         if (existsSync(packagePath)) {
