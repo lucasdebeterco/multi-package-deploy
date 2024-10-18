@@ -17,7 +17,7 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "release": "node ./scripts/release.js",
+    "release": "node src/scripts/release.js",
     "version:all": "npm run --workspace src/packages version:update",
     "publish:all": "npm publish --workspaces --if-present --access public",
     "publish": "npm publish --access public"
