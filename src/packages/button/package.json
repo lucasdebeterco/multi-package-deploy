@@ -1,7 +1,7 @@
 {
     "name": "@multi-package-deploy/button",
     "private": false,
-    "version": "0.0.19",
+    "version": "0.0.20",
     "license": "MIT",
     "source": "./dist/index.js",
     "main": "./dist/index.js",
