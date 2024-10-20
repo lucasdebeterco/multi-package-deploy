@@ -1,7 +1,7 @@
 {
     "name": "@multi-package-deploy/input",
     "private": false,
-    "version": "0.0.22",
+    "version": "0.0.23",
     "license": "MIT",
     "source": "./dist/index.js",
     "main": "./dist/index.js",

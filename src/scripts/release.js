@@ -4,7 +4,7 @@ import { join } from 'path'
 
 // Lê o nome do pacote e o token
 const packageName = process.argv.find(arg => arg.startsWith('--package='))?.split('=')[1]
-const npmToken = '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'
+const npmToken = process.env.NPM_TOKEN
 
 // Caminho do .npmrc
 const npmrcPath = join(process.cwd(), '.npmrc')
