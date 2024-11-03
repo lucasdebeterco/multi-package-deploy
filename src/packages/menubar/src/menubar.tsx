@@ -1,19 +1,19 @@
-import React from "react"
 import * as Menubar from "@radix-ui/react-menubar"
 import {
     CheckIcon,
     ChevronRightIcon,
     DotFilledIcon,
 } from "@radix-ui/react-icons"
+import { useState } from "react"
 
 const RADIO_ITEMS = ["Andy", "Benoît", "Luis"];
 const CHECK_ITEMS = ["Always Show Bookmarks Bar", "Always Show Full URLs"];
 
 const MenubarDemo = () => {
-    const [checkedSelection, setCheckedSelection] = React.useState([
+    const [checkedSelection, setCheckedSelection] = useState([
         CHECK_ITEMS[1],
     ]);
-    const [radioSelection, setRadioSelection] = React.useState(RADIO_ITEMS[2]);
+    const [radioSelection, setRadioSelection] = useState(RADIO_ITEMS[2]);
 
     return (
         <Menubar.Root className="flex rounded-md bg-white p-[3px] shadow-[0_2px_10px] shadow-blackA4">
