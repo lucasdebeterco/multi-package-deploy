@@ -9,7 +9,7 @@ import { useState } from "react"
 const RADIO_ITEMS = ["Andy", "Benoît", "Luis"];
 const CHECK_ITEMS = ["Always Show Bookmarks Bar", "Always Show Full URLs"];
 
-const MenubarDemo = () => {
+export function MenubarDemo() {
     const [checkedSelection, setCheckedSelection] = useState([
         CHECK_ITEMS[1],
     ]);
@@ -247,7 +247,5 @@ const MenubarDemo = () => {
                 </Menubar.Portal>
             </Menubar.Menu>
         </Menubar.Root>
-    );
-};
-
-export default MenubarDemo;
+    )
+}
