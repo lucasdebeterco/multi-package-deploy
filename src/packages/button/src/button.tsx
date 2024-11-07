@@ -1,5 +1,5 @@
 export function Button() {
     <div>
-        Button
+        <button>Button</button>
     </div>
 }
