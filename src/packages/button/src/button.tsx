@@ -1,5 +1,7 @@
 export function Button() {
-    <div>
-        <button>Button</button>
-    </div>
+    return (
+        <button>
+            Button
+        </button>
+    )
 }

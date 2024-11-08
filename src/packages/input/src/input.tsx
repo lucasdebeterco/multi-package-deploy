@@ -1,5 +1,7 @@
 export function Input() {
-    <div>
-        Input
-    </div>
+    return  (
+        <div>
+            Input
+        </div>
+    )
 }
