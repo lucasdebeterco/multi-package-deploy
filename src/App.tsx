@@ -1,6 +1,6 @@
-import { Menubar } from "./packages/menubar"
-import { Button } from "./packages/button"
-import { Input } from "./packages/input"
+import { Menubar } from "@multi-package-deploy/menubar";
+import { Button } from "@multi-package-deploy/button";
+import { Input } from "@multi-package-deploy/input";
 
 function App() {
 
