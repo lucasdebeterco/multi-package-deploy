@@ -1,7 +1,7 @@
 export function Input() {
     return  (
         <div>
-            Input
+            <input type='text' />
         </div>
     )
 }
