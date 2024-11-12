@@ -7,8 +7,17 @@ function App() {
   return (
       <div className='p-20 max-w-[1280px] mx-auto flex flex-col gap-10'>
           <Menubar />
+          <div>
+              aa:
+              <Input />
+              aa:
+              <Input />
+              aa:
+              <Input />
+              aa:
+              <Input />
+          </div>
           <Button />
-          <Input />
       </div>
   )
 }
