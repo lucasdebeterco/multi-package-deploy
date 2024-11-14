@@ -9,13 +9,13 @@ function App() {
           <Menubar />
           <div>
               aa:
-              <Input />
+              <Input placeholder='Placeholder' />
               aa:
-              <Input />
+              <Input placeholder='Placeholder' />
               aa:
-              <Input />
+              <Input placeholder='Placeholder' />
               aa:
-              <Input />
+              <Input placeholder='Placeholder' />
           </div>
           <Button />
       </div>

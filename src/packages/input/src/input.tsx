@@ -1,7 +1,12 @@
-export function Input() {
+import { InputHTMLAttributes} from "react";
+
+export function Input({props}: InputHTMLAttributes<HTMLInputElement>) {
     return  (
         <div>
-            <input type='text' className='border border-zinc-50' />
+            <input
+                {...props}
+                className='border border-zinc-100'
+            />
         </div>
     )
 }
