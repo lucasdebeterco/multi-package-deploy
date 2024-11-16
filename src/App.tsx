@@ -7,15 +7,23 @@ function App() {
   return (
       <div className='p-20 max-w-[1280px] mx-auto flex flex-col gap-10'>
           <MenubarDemo />
-          <div>
-              aa:
-              <Input placeholder='Placeholder' />
-              aa:
-              <Input placeholder='Placeholder' />
-              aa:
-              <Input placeholder='Placeholder' />
-              aa:
-              <Input placeholder='Placeholder' />
+          <div className='flex flex-col gap-2'>
+              <Input
+                  placeholder='Placeholder'
+                  label='Label 1'
+              />
+              <Input
+                  placeholder='Placeholder'
+                  label='Label 1'
+              />
+              <Input
+                  placeholder='Placeholder'
+                  label='Label 1'
+              />
+              <Input
+                  placeholder='Placeholder'
+                  label='Label 1'
+              />
           </div>
           <Button />
       </div>
