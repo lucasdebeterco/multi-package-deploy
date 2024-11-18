@@ -9,20 +9,16 @@ function App() {
           <MenubarDemo />
           <div className='flex flex-col gap-2'>
               <Input
-                  placeholder='Placeholder'
-                  label='Label 1'
+                  label='Example input'
               />
               <Input
-                  placeholder='Placeholder'
-                  label='Label 1'
+                  label='Example input'
               />
               <Input
-                  placeholder='Placeholder'
-                  label='Label 1'
+                  label='Example input'
               />
               <Input
-                  placeholder='Placeholder'
-                  label='Label 1'
+                  label='Example input'
               />
           </div>
           <Button />

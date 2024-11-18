@@ -4,7 +4,7 @@ export function MenubarDemo() {
     return (
         <Menubar.Root className="flex rounded-md bg-zinc-800 p-2 shadow-[0_2px_10px] shadow-zinc-900">
             <Menubar.Menu>
-                <Menubar.Trigger className="flex select-none items-center justify-between gap-0.5 rounded px-3 py-2 font-medium leading-none text-zinc-100 outline-none data-[state=open]:bg-zinc-900">
+                <Menubar.Trigger className="flex select-none items-center justify-between gap-0.5 rounded px-3 py-2 font-medium leading-none text-zinc-100 outline-none data-[state=open]:bg-violet-700">
                     File
                 </Menubar.Trigger>
                 <Menubar.Portal>
@@ -28,7 +28,7 @@ export function MenubarDemo() {
             </Menubar.Menu>
 
             <Menubar.Menu>
-                <Menubar.Trigger className="flex select-none items-center justify-between gap-0.5 rounded px-3 py-2 font-medium leading-none text-zinc-100 outline-none data-[state=open]:bg-zinc-900">
+                <Menubar.Trigger className="flex select-none items-center justify-between gap-0.5 rounded px-3 py-2 font-medium leading-none text-zinc-100 outline-none data-[state=open]:bg-violet-700">
                     Edit
                 </Menubar.Trigger>
                 <Menubar.Portal>

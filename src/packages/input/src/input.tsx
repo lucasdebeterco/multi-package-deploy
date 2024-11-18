@@ -1,6 +1,6 @@
 import { InputHTMLAttributes} from "react";
 
-export function Input({label, name, props}: InputHTMLAttributes<HTMLInputElement>) {
+export function Input({label, name, ...props}: InputHTMLAttributes<HTMLInputElement>) {
     return  (
         <div>
             {label && (
