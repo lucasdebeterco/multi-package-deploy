@@ -1,8 +1,13 @@
 import { InputHTMLAttributes} from "react";
 
-export function Input({label, name, ...props}: InputHTMLAttributes<HTMLInputElement>) {
+interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+    label: string
+    name: string
+}
+
+export function Input({label, name, ...props}: InputProps) {
     return  (
-        <div>
+        <div className='flex flex-col gap-1'>
             {label && (
                 <label htmlFor={name}>
                     {label}
