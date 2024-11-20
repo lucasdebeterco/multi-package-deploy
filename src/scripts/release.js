@@ -39,7 +39,6 @@ try {
 } catch (error) {
     console.error('Erro ao executar o script:', error.message, error.stack)
 } finally {
-    // Remove o .npmrc temporário
     if (existsSync(npmrcPath)) {
         unlinkSync(npmrcPath)
         console.log('.npmrc temporário removido.')
