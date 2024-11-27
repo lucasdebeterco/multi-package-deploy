@@ -4,7 +4,7 @@ import { join } from 'path'
 
 const packageName = process.argv.find(arg => arg.startsWith('--package='))?.split('=')[1]
 //const npmToken = import.meta.env.VITE_NPM_TOKEN
-const npmToken = ''
+const npmToken = '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'
 
 // Cria um .npmrc temporário
 const npmrcPath = join(process.cwd(), '.npmrc')
