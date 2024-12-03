@@ -24,10 +24,10 @@ jobs:
 
       - name: Debug environment
         env:
-          NPM_TOKEN: ${{ secrets.GB_TOKEN }}
+          GB_TOKEN: ${{ secrets.GB_TOKEN }}
         run: env
 
       - name: Run release script
         env:
-          NPM_TOKEN: ${{ secrets.GB_TOKEN }}
+          GB_TOKEN: ${{ secrets.GB_TOKEN }}
         run: node src/scripts/release.js
