@@ -27,5 +27,5 @@ jobs:
 
       - name: Run release script
         env:
-          NPM_TOKEN: '${{ secrets.NPM_TOKEN }}'
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: node src/scripts/release.js
