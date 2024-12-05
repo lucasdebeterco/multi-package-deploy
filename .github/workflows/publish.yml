@@ -23,6 +23,8 @@ jobs:
         run: npm install
 
       - name: Debug environment
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: env
 
       - name: Run release script
