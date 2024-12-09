@@ -8,7 +8,8 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
-
+    env:
+        GB_TOKEN: ${{ secrets.GB_TOKEN }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -23,11 +24,7 @@ jobs:
         run: npm install
 
       - name: Debug environment
-        env:
-          GB_TOKEN: ${{ secrets.GB_TOKEN }}
         run: env
 
       - name: Run release script
-        env:
-          GB_TOKEN: ${{ secrets.GB_TOKEN }}
         run: node src/scripts/release.js
