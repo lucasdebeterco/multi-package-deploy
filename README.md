@@ -1,6 +1,6 @@
 # NPM Package Management with Automated CI/CD
 
-This project is a monorepo for managing multiple npm packages using a workspace structure. It includes a custom release script for publishing packages to npm and a GitHub Actions workflow for automated CI/CD.
+This project is a monorepo for managing multiple npm packages using a workspace structure. It includes a custom release script for publishing packages to npm and a GitHub Actions workflow for automated CI/CD and publish.
 
 
 ### Directories
